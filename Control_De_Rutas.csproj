@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Captura de pantalla 2023-07-26 205756.png" />
+    <None Remove="Captura de pantalla 2023-07-26 210042.png" />
+    <None Remove="Contacto - Link Envios.png" />
+    <None Remove="ImgLogin.jpg" />
+    <None Remove="Vistas\bitacoraIcon.png" />
+    <None Remove="Vistas\envioicon.png" />
+    <None Remove="Vistas\excel-icon.png" />
+    <None Remove="Vistas\ExportExcel.png" />
+    <None Remove="Vistas\GifGraficoBarras.gif" />
+    <None Remove="Vistas\grafica-de-pastel.png" />
+    <None Remove="Vistas\GraficoIcon.png" />
+    <None Remove="Vistas\homeicon.png" />
+    <None Remove="Vistas\LogOut.png" />
+    <None Remove="Vistas\pngtree-placeholder-icon-in-trendy-style-isolated-background-png-image_1535434.jpg" />
+    <None Remove="Vistas\RastreoEnVIvoIcon.jpg" />
+    <None Remove="Vistas\RastreoIcon.png" />
+    <None Remove="Vistas\RefreshIcon.png" />
+    <None Remove="Vistas\SignUpEntrega2.jpg" />
+    <None Remove="Vistas\SingUpEntrega.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="6.2.7" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="MySql.EntityFrameworkCore" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Captura de pantalla 2023-07-26 205756.png" />
+    <Resource Include="Captura de pantalla 2023-07-26 210042.png" />
+    <Resource Include="Contacto - Link Envios.png" />
+    <Resource Include="ImgLogin.jpg" />
+    <Resource Include="Vistas\addCliente.png" />
+    <Resource Include="Vistas\AddPaqueteIcon.png" />
+    <Resource Include="Vistas\bitacoraIcon.png" />
+    <Resource Include="Vistas\envioicon.png" />
+    <Resource Include="Vistas\GifGraficoBarras.gif" />
+    <Resource Include="Vistas\grafica-de-pastel.png" />
+    <Resource Include="Vistas\GraficoIcon.png" />
+    <Resource Include="Vistas\homeicon.png" />
+    <Resource Include="Vistas\LogOut.png" />
+    <Resource Include="Vistas\RastreoEnVIvoIcon.jpg" />
+    <Resource Include="Vistas\RastreoIcon.png" />
+    <Resource Include="Vistas\excel-icon.png" />
+    <Resource Include="Vistas\ExportExcel.png" />
+    <Resource Include="Vistas\pngtree-placeholder-icon-in-trendy-style-isolated-background-png-image_1535434.jpg" />
+    <Resource Include="Vistas\RefreshIcon.png" />
+    <Resource Include="Vistas\SignUpEntrega2.jpg" />
+    <Resource Include="Vistas\SingUpEntrega.jpg" />
+  </ItemGroup>
+
+</Project>

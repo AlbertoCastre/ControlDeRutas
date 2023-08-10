@@ -1,0 +1,55 @@
+﻿<Window x:Class="Control_De_Rutas.Vistas.ClienteOpc"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_De_Rutas.Vistas"
+        mc:Ignorable="d"
+        Title="ClienteOpc" Height="472" Width="800">
+    <Window.Resources>
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <!-- Define el valor del radio aquí -->
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="ClienteOpc1" Background="#FF377F7F" Height="453" VerticalAlignment="Top" >
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="313" Margin="0,83,0,0" VerticalAlignment="Top" Width="663" Background="White">
+            <Button x:Name="btnHomeBack" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="65" BorderBrush="{x:Null}" Click="btnHomeBack_Click" Margin="576,9,0,0">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Vistas/homeicon.png"/>
+                </Button.Background>
+            </Button>
+
+        </Border>
+        <Label Content="Nombre:" HorizontalAlignment="Left" Height="41" Margin="189,140,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Apellido:" HorizontalAlignment="Left" Height="41" Margin="189,187,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Correo:" HorizontalAlignment="Left" Height="41" Margin="189,235,0,0" VerticalAlignment="Top" Width="65"/>
+        <Label Content="Teléfono:" HorizontalAlignment="Left" Height="41" Margin="189,278,0,0" VerticalAlignment="Top" Width="65"/>
+        <TextBox x:Name="txtNombreCliente" HorizontalAlignment="Left" Height="36" Margin="260,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124" />
+        <TextBox x:Name="txtApellidoCliente" HorizontalAlignment="Left" Height="36" Margin="260,184,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="txtCorreoCliente" HorizontalAlignment="Left" Height="36" Margin="260,234,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <TextBox x:Name="txtTelefonoCliente" HorizontalAlignment="Left" Height="36" Margin="260,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+        <Label Content="Código Postal" HorizontalAlignment="Left" Height="39" Margin="399,140,0,0" VerticalAlignment="Top" Width="111"/>
+        <ComboBox x:Name="cbCodigoPostal" HorizontalAlignment="Left" Height="33" Margin="497,140,0,0" VerticalAlignment="Top" Width="103"/>
+        <Button x:Name="btnDeleteCliente" Background="#FFF12B2B" Content="Eliminar" HorizontalAlignment="Left" Height="24" Margin="516,337,0,0" VerticalAlignment="Top" Width="66" Style="{StaticResource RoundButtonStyle}" FontWeight="Bold" Foreground="White" Click="btnDeleteCliente_Click" />
+        <Button x:Name="BtnAgregar" Background="#377F7F" Content="Agregar" HorizontalAlignment="Left" Height="24" Margin="422,295,0,0" VerticalAlignment="Top" Width="66" Click="BtnAgregar_Click" Style="{StaticResource RoundButtonStyle}" Foreground="White" FontWeight="Bold"  />
+        <Label Content="Clientes" HorizontalAlignment="Center" Height="78" VerticalAlignment="Top" Width="456" Foreground="White" FontSize="60" FontFamily="Sitka Small Semibold" HorizontalContentAlignment="Center" FontStyle="Italic" FontWeight="Bold"/>
+        <Button x:Name="btnBuscarCliente" Background="#377F7F" Style="{StaticResource RoundButtonStyle}" Content="Buscar" HorizontalAlignment="Left" Height="24" Margin="516,295,0,0" VerticalAlignment="Top" Width="66" FontWeight="Bold" Foreground="White" Click="btnBuscarCliente_Click"/>
+        <Button x:Name="btnUpdateCliente" Background="#377F7F" Style="{StaticResource RoundButtonStyle}" Content="Actualizar" HorizontalAlignment="Left" Height="24" Margin="422,337,0,0" VerticalAlignment="Top" Width="66" FontWeight="Bold" Foreground="White" Click="btnUpdateCliente_Click"/>
+        <Label Content="ID " HorizontalAlignment="Left" Height="41" Margin="189,324,0,0" VerticalAlignment="Top" Width="65"/>
+        <TextBox x:Name="txtIdCliente" HorizontalAlignment="Left" Height="36" Margin="260,324,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="124"/>
+    </Grid>
+</Window>

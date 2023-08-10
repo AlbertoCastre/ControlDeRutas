@@ -1,0 +1,79 @@
+﻿<Window x:Class="Control_De_Rutas.Vistas.GeneradorDeBitacoras"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_De_Rutas.Vistas"
+        mc:Ignorable="d"
+        Title="Generador De Bitacoras" Height="726" Width="1331">
+    <Window.Resources>
+
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                            <!-- Define el valor del radio aquí -->
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+
+    </Window.Resources>
+
+    <Grid Background="#FFFDFDFD" Margin="10,0,0,-6" HorizontalAlignment="Left" Width="1321" RenderTransformOrigin="0.302,1.331">
+
+
+
+        <DataGrid x:Name="PaqueteTable" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ColumnWidth="*" IsSynchronizedWithCurrentItem="True" Margin="335,188,25,0" Height="425" VerticalAlignment="Top" BorderBrush="#FF377F7F"  Background="#FFD4FFF2" Foreground="Black" FontSize="15" FontFamily="Arial" HorizontalGridLinesBrush="#FF377F7F" VerticalGridLinesBrush="#FF03FFB4" OpacityMask="#FFFF0707" CanUserDeleteRows="False" CanUserReorderColumns="False"  >
+
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Header="Id Paquete" Binding="{Binding PkIdPaquete}" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Clientes.NombreCliente}" />
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Clientes.ApellidoCliente}" />
+                <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}" />
+                <DataGridTextColumn Header="Peso" Binding="{Binding Peso}" />
+                <DataGridTextColumn Header="Origen" Binding="{Binding Origen}" />
+                <DataGridTextColumn Header="Destino" Binding="{Binding Destino}" />
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+
+
+        <Label x:Name="Nombre_Generador_de_BItacoras" FontSize="20" Content="Generador de Bitacoras" HorizontalAlignment="Left" Height="48" VerticalAlignment="Top" Width="250" RenderTransformOrigin="0.5,0.5" Margin="0,3,0,0" FontWeight="Bold"/>
+        <Button x:Name="btn_ExportExcel" HorizontalAlignment="Left" Height="85" Margin="198,56,0,0" VerticalAlignment="Top" Width="73" BorderBrush="{x:Null}" Click="btn_ExportExcel_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/excel-icon.png" TileMode="None" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnHomeBack" HorizontalAlignment="Left" Height="52" Margin="32,69,0,0" VerticalAlignment="Top" Width="65" BorderBrush="{x:Null}" Click="btnHomeBack_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/homeicon.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="179" Margin="54,188,0,0" VerticalAlignment="Top" Width="212" Source="/Vistas/GifGraficoBarras.gif"/>
+        <Image HorizontalAlignment="Left" Height="179" Margin="54,458,0,0" VerticalAlignment="Top" Width="196" Source="/Vistas/GraficoIcon.png"/>
+        <Label Content="Paquetes del mes actual" HorizontalAlignment="Left" Height="35" Margin="44,360,0,0" VerticalAlignment="Top" Width="216" HorizontalContentAlignment="Center" FontWeight="Bold" VerticalContentAlignment="Center" FontSize="18"/>
+        <Label Content="Metas del mes" HorizontalAlignment="Left" Height="43" Margin="86,651,0,0" VerticalAlignment="Top" Width="132" FontSize="18" FontWeight="Bold"/>
+        <Label Content="Exportar a un excel" HorizontalAlignment="Left" Height="34" Margin="164,137,0,0" VerticalAlignment="Top" Width="140" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label HorizontalAlignment="Left" Height="33" Margin="327,137,0,0" VerticalAlignment="Top" Width="178" FontSize="14" FontWeight="Bold" Content="Refrescar Tabla" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnRecargarTabla" HorizontalAlignment="Left" Height="74" Margin="364,58,0,0" VerticalAlignment="Top" Width="104" BorderBrush="{x:Null}" Click="btnRecargarTabla_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/RefreshIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Regresar a menú" HorizontalAlignment="Left" Height="27" Margin="-8,137,0,0" VerticalAlignment="Top" Width="144" HorizontalContentAlignment="Center" FontWeight="Bold" FontSize="14"/>
+        <Label Content="TransLogistics" HorizontalAlignment="Left" Height="81" Margin="622,51,0,0" VerticalAlignment="Top" Width="466" FontWeight="Bold" FontSize="48" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,80 @@
+﻿<Window x:Class="Control_De_Rutas.Vistas.SignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_De_Rutas.Vistas"
+        mc:Ignorable="d"
+        Title="SignUp" Height="460" Width="847">
+    <Window.Resources>
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <!-- Define el valor del radio aquí -->
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid Background="#FFFFFF" Margin="0,0,0,-6">
+
+
+        <!-- BACKGROUND INICIO -->
+
+
+        <!-- BODY INICIO -->
+
+
+
+        <!-- DECORATION - SIGN UP -->
+
+        <Label Content="Username" HorizontalAlignment="Left" Height="32" Margin="532,117,0,0" VerticalAlignment="Top" Width="74" FontWeight="Bold"  />
+
+        <Label Content=" Confirmar Username" HorizontalAlignment="Left" Height="31" Margin="472,170,0,0" VerticalAlignment="Top" Width="134" FontWeight="Bold" />
+
+        <Label Content="Password" HorizontalAlignment="Left" Height="36" Margin="532,227,0,0" VerticalAlignment="Top" Width="74" FontWeight="Bold" />
+
+        <Label Content=" Confirmar Password" HorizontalAlignment="Left" Height="32" Margin="472,275,0,0" VerticalAlignment="Top" Width="134" FontWeight="Bold" />
+
+
+        <!-- INSERT - SIGN UP -->
+
+        <TextBox x:Name="txt_Username" Margin="618,117,0,0" TextWrapping="Wrap" Text=" " TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20" FontFamily="Bell MT" Width="194" Height="32" />
+
+        <TextBox x:Name="txt_UsernameValid" Margin="618,170,0,0" TextWrapping="Wrap" Text=" " TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20" FontFamily="Bell MT" Width="194" Height="31" />
+
+        <TextBox x:Name="txt_Password" Margin="618,223,0,0" TextWrapping="Wrap" Text=" " TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20" FontFamily="Bell MT" Width="194" Height="31" />
+
+        <TextBox x:Name="txt_PasswordValid" Margin="618,275,0,0" TextWrapping="Wrap" Text=" " TextAlignment="Left" HorizontalAlignment="Left" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="20" FontFamily="Bell MT" Width="194" Height="32"/>
+
+
+        <!-- INTERACT - SIGN UP -->
+
+        <Button x:Name="btn_CreateUser" Content="CREATE ACCOUNT" HorizontalAlignment="Left" Height="48" Margin="472,322,0,0" VerticalAlignment="Top" Width="170" Background="#377f7f" BorderBrush="#FFFFFF" BorderThickness="2" Style="{StaticResource RoundButtonStyle}" Click="btn_CreateUser_Click" Foreground="White" FontWeight="Bold"/>
+        <Label Content="Sign Up" HorizontalAlignment="Left" Height="75" Margin="400,17,0,0" VerticalAlignment="Top" Width="178" FontSize="48" Foreground="#FF377F7F"/>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="450" Margin="-3,0,0,0" VerticalAlignment="Center" Width="181" Background="#FF377F7F"/>
+        <Border BorderThickness="1" HorizontalAlignment="Left" Height="386" Margin="23,29,0,0" VerticalAlignment="Top" Width="174" Background="White"/>
+        <Image HorizontalAlignment="Left" Height="133" Margin="41,53,0,0" VerticalAlignment="Top" Width="179" Source="/Vistas/SingUpEntrega.jpg"/>
+        <Image HorizontalAlignment="Left" Height="146" Margin="40,239,0,0" VerticalAlignment="Top" Width="182" Source="/Vistas/SignUpEntrega2.jpg"/>
+        <Label x:Name="labelRol" Content="Rol" Height="28" Margin="212,210,0,0" VerticalAlignment="Top" Width="112" FontWeight="Bold" HorizontalAlignment="Left" HorizontalContentAlignment="Right"/>
+        <ComboBox x:Name="cbRoles" HorizontalAlignment="Left" Height="28" Margin="332,210,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button Content="inicie sesión" HorizontalAlignment="Left" Height="24" Margin="380,372,0,0" VerticalAlignment="Top" Width="69" Background="{x:Null}" Foreground="Red" BorderBrush="{x:Null}" Click="Button_Click"/>
+        <Label Content="¿Ya tiene cuenta?" HorizontalAlignment="Left" Height="29" Margin="279,371,0,0" VerticalAlignment="Top" Width="101"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Height="32" Margin="268,156,0,0" VerticalAlignment="Top" Width="80" FontWeight="Bold"  />
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left"  Margin="332,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140" Height="32" />
+
+
+    </Grid>
+
+
+</Window>

@@ -1,0 +1,63 @@
+﻿<Window x:Class="Control_De_Rutas.Vistas.RastreodePaquete"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_De_Rutas.Vistas"
+        mc:Ignorable="d"
+        Title="RastreodePaquete" Height="635" Width="910">
+    <Window.Resources>
+        <Style x:Key="RoundButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="20">
+                            <!-- Define el valor del radio aquí -->
+                            <ContentPresenter HorizontalAlignment="Center"
+                                          VerticalAlignment="Center" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10,10,0,0" Background="White" Height="615" VerticalAlignment="Top">
+        <Label Content="Tipo de paquete" HorizontalAlignment="Left" Height="35" Margin="415,334,0,0" VerticalAlignment="Top" Width="114" FontSize="14"/>
+        <TextBox x:Name="TextBoxFecha" HorizontalAlignment="Left" Height="26" Margin="47,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="83" FontSize="14" IsEnabled="False"/>
+        <Label Content="Código del paquete" HorizontalAlignment="Left" Height="28" Margin="47,35,0,0" VerticalAlignment="Top" Width="136" FontSize="14"/>
+        <TextBox x:Name="TextBoxIdPaquete" HorizontalAlignment="Left" Height="26" Margin="190,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" FontSize="14"/>
+        <Button x:Name="BotonSelect" Style="{StaticResource RoundButtonStyle}" Content="Buscar" HorizontalAlignment="Left" Height="25" Margin="299,35,0,0" VerticalAlignment="Top" Width="88" Background="#377f7f" FontSize="14" FontWeight="Bold" Foreground="#FFE6E6E6" RenderTransformOrigin="0.598,1.866" Click="BotonSelect_Click"/>
+        <Button x:Name="BotonRiniciar" Style="{StaticResource RoundButtonStyle}" Content="Reiniciar" HorizontalAlignment="Left" Height="24" Margin="392,0,0,555" VerticalAlignment="Bottom" Width="88" Background="#377f7f" FontSize="14" FontWeight="Bold" Foreground="#FFE6E6E6" Click="BotonRiniciar_Click"/>
+        <Label Content="Fecha" HorizontalAlignment="Left" Height="28" Margin="0,80,0,0" VerticalAlignment="Top" Width="47" FontSize="14"/>
+        <Label Content="Hora" HorizontalAlignment="Left" Height="29" Margin="143,80,0,0" VerticalAlignment="Top" Width="39" FontSize="14" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TextBoxHora" HorizontalAlignment="Left" Height="26" Margin="190,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" FontSize="14" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxTipoPaquete" HorizontalAlignment="Left" Height="35" Margin="528,334,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <Label Content="Monitorear" HorizontalAlignment="Left" Height="35" Margin="132,137,0,0" VerticalAlignment="Top" Width="115" FontWeight="Bold" FontSize="18" Grid.ColumnSpan="2"/>
+        <Label x:Name="LabelCliente" Content="Cliente" HorizontalAlignment="Left" Height="34" Margin="412,94,0,0" VerticalAlignment="Top" Width="117" FontSize="14" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelOrigen" Content="Origen" HorizontalAlignment="Left" Height="38" Margin="412,235,0,0" VerticalAlignment="Top" Width="117" FontSize="14" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelDestino" Content="Destino" HorizontalAlignment="Left" Height="39" Margin="412,281,0,0" VerticalAlignment="Top" Width="117" FontSize="14" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelDescripcion" Content="Descripción" HorizontalAlignment="Left" Height="40" Margin="412,385,0,0" VerticalAlignment="Top" Width="117" FontSize="14" RenderTransformOrigin="0.496,0.676" HorizontalContentAlignment="Right"/>
+        <Label x:Name="LabelObservaciones" Content="Observaciones" HorizontalAlignment="Left" Height="39" Margin="412,439,0,0" VerticalAlignment="Top" Width="117" FontSize="14" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Right"></Label>
+        <Label x:Name="LabelPeso" Content="Peso" HorizontalAlignment="Left" Height="38" Margin="412,191,0,0" VerticalAlignment="Top" Width="117" FontSize="14" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="TextBoxCliente" HorizontalAlignment="Left" Height="35" Margin="528,93,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxOrigen" HorizontalAlignment="Left" Height="35" Margin="528,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxDestino" HorizontalAlignment="Left" Height="35" Margin="528,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxDescripcion" HorizontalAlignment="Left" Height="35" Margin="528,388,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <TextBox x:Name="TextBoxObservaciones" HorizontalAlignment="Left" Height="80" Margin="528,438,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False" />
+        <TextBox x:Name="TextBoxPeso" HorizontalAlignment="Left" Height="33" Margin="528,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False" />
+        <Label x:Name="LabelEstado" Content="Estado" HorizontalAlignment="Left" Height="39" Margin="412,141,0,0" VerticalAlignment="Top" Width="117" FontSize="14" HorizontalContentAlignment="Right"/>
+        <TextBox x:Name="TextBoxEstado" HorizontalAlignment="Left" Height="33" Margin="528,143,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="333" FontSize="14" IsEnabled="False"/>
+        <Button x:Name="btnHomeBack" HorizontalAlignment="Left" Height="52" VerticalAlignment="Top" Width="64" BorderBrush="{x:Null}" Click="btnHomeBack_Click" Margin="630,11,0,0">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/homeicon.png"/>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="236" Margin="74,208,0,0" VerticalAlignment="Top" Width="230" Source="/Vistas/RastreoEnVIvoIcon.jpg"/>
+        <Label HorizontalAlignment="Left" Height="25" Margin="606,63,0,0" VerticalAlignment="Top" Width="112" Content="Regresar a menú" HorizontalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

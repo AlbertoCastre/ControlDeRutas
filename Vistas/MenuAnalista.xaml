@@ -1,0 +1,33 @@
+﻿<Window x:Class="Control_De_Rutas.Vistas.MenuAnalista"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Control_De_Rutas.Vistas"
+        mc:Ignorable="d"
+        Title="Analista" Height="450" Width="800">
+    <Grid x:Name="MenuAnalista1" Background="#FF377F7F" >
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Center" Height="342" Margin="0,74,0,0" VerticalAlignment="Top" Width="704" Background="White">
+
+        </Border>
+        <Label Content="TransLogistcs" HorizontalAlignment="Center" Height="91" VerticalAlignment="Top" Width="440" FontSize="60" Foreground="White" HorizontalContentAlignment="Center" FontStyle="Italic" Margin="0,-17,0,0"/>
+        <Button x:Name="btnRastreo" HorizontalAlignment="Left" Height="69" Margin="223,148,0,0" VerticalAlignment="Top" Width="75" BorderBrush="{x:Null}" Click="btnRastreo_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/RastreoIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnAddPaquete" HorizontalAlignment="Left" Height="69" Margin="335,148,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\betot\OneDrive\Documentos\Visual Studio 2022\Code Snippets\Visual C#\Control_De_Rutas\Vistas\AddPaqueteIcon.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Rastreo " HorizontalAlignment="Left" Height="37" Margin="230,228,0,0" VerticalAlignment="Top" Width="61" HorizontalContentAlignment="Center"/>
+        <Label Content="Nuevo Paquete" HorizontalAlignment="Left" Height="36" Margin="324,229,0,0" VerticalAlignment="Top" Width="102" HorizontalContentAlignment="Center"/>
+        <Button x:Name="btnEnvios" HorizontalAlignment="Left" Height="69" Margin="457,148,0,0" VerticalAlignment="Top" Width="80" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/Vistas/envioicon.png"/>
+            </Button.Background>
+        </Button>
+        <Label Content="Iniciar envio" HorizontalAlignment="Left" Height="36" Margin="446,225,0,0" VerticalAlignment="Top" Width="102" HorizontalContentAlignment="Center"/>
+    </Grid>
+</Window>
